@@ -1,7 +1,5 @@
-function openMenu() {
-  document.body.classList += " menu--open"
-}
+function toggleMenu() {
+  const menuBackdrop = document.querySelector(".menu__backdrop");
 
-function closeMenu() {
-  document.body.classList.remove('menu--open')
+  menuBackdrop.classList.toggle("menu--open"); // Toggle the 'menu--open' class
 }

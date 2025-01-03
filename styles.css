@@ -89,21 +89,20 @@ li {
 }
 
 .menu__backdrop {
-  position: absolute;
-  background-color: #242424;
+  position: fixed; /* Make it cover the entire screen */
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  Z-index: 100;
- /* display: flex; */
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  z-index: 100; /* Make sure it appears above other elements */
+  display: none; /* Initially hidden */
   justify-content: center;
   align-items: center;
-  display: none;
 }
 
-.menu--open .menu__backdrop {
-  display: flex;
+.menu--open {
+  display: flex; /* When the menu is toggled, make it visible */
 }
 
 .menu__links {
